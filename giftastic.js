@@ -22,10 +22,10 @@ $(document).ready(function() {
   $(document).on('click', '.other', function() {
   
       //new variable will log the text data from each button
-      var otherTopics = $(this).html(); 
+      var otherTopics= $(this).html(); 
       // console.log(martialArts);
   
-      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + otherTopics + "&api_key=vH5N7pS9DEhQ0YFvCzJh4zInDqDOvwua&limit=10";
+      var queryURL= "https://api.giphy.com/v1/gifs/search?q=" +otherTopics+ "&api_key=vH5N7pS9DEhQ0YFvCzJh4zInDqDOvwua&limit=10";
     
   
       // Creating an call for each button
