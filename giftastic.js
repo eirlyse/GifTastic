@@ -1,14 +1,13 @@
-//Initial array of movies	
 $(document).ready(function() {
 
     var Populartopics = ["Animals", "Art", "Celebrities", "Decades", "Beauty", "Memes", "Nature", "Music"];	
   
-    //  create topics array buttons
+    //  create popular topics buttons
     function createButtons(){
       $('#buttons-view').empty();
   
       for (var i = 0; i < Populartopics.length; i++) {
-              //create all buttons
+              //create buttons
               var a = $('<button>');
               a.addClass('other');
               a.attr('data-name', Populartopics[i]);
@@ -21,9 +20,9 @@ $(document).ready(function() {
   //on button click
   $(document).on('click', '.other', function() {
   
-      //new variable will log the text data from each button
-      var otherTopics= $(this).html(); 
-      // console.log(martialArts);
+
+      var otherTopics= $(this).text(); 
+      
   
       var queryURL= "https://api.giphy.com/v1/gifs/search?q=" +otherTopics+ "&api_key=vH5N7pS9DEhQ0YFvCzJh4zInDqDOvwua&limit=10";
     
@@ -32,7 +31,7 @@ $(document).ready(function() {
       $.ajax({
         url: queryURL,
         method: "GET"
-      }).done(function(response) {
+      }).done (function(response) {
   
         var results = response.data;
          
