@@ -47,7 +47,6 @@ $(document).ready(function() {
                       $('#gif-view').prepend(gifImage);
                       gifImage.on('click', playGif);
   
-          // Pulling ratings for each gif
           var rating = results[i].rating;
               
           var displayRated= $('<p>').text("Rating: " + rating);
